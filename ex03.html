@@ -1,0 +1,62 @@
+<script>
+
+    // Classe é um modelo para criação de objetos.
+    class Pessoa {
+
+        // Atributos 
+        nome;
+        login;
+        senha;
+
+        // Método construtor
+        constructor(nome) {
+            this.setNome(nome);
+        }
+
+        // setters -> Métodos para atribuir valores para os atributos.
+        setNome(nome) {
+
+            // https://www.w3schools.com/jsref/jsref_replace.asp
+            nome = nome.replace('&', '');
+
+            // https://www.w3schools.com/jsref/jsref_trim_string.asp
+            this.nome = nome.trim();
+        }
+
+        setLogin() {
+            this.login = login;
+        }
+
+        setSenha() {
+            this.senha = senha;
+        }
+
+        // getters -> Métodos para ler o valor dos atributos de forma segura.
+        getNome() {
+            return this.nome.trim();
+        }
+
+        getLogin() {
+            return this.login;
+        }
+
+        getSenha() {
+            return this.senha;
+        }
+    }
+
+    // Instanciar classe -> Criar um objeto novo do tipo da classe.
+    var rodrigo = new Pessoa(' Rodrigo da Silva     &     ');
+
+    // Exibindo os valores dos atributos
+    console.log(rodrigo.nome, rodrigo.login, rodrigo.senha);
+
+    // Alterando atributos
+    // rodrigo.setNome(' Rodrigo da Silva     &     ');
+    rodrigo.login = 'rodrigo@#teste.com';
+    rodrigo.senha = '123abc';
+
+    // Exibindo os valores dos atributos
+    console.log(rodrigo.getNome());
+
+</script> 

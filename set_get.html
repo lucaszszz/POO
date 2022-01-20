@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo">isso aqui</p>
+    <p id="demo2">isso aqui</p>
+
+    <script>
+        class Car {
+
+            _carname;
+
+            constructor(brand) {
+                this._carname = brand;
+            }
+            get carname() {
+                return this._carname;
+            }
+            set carname(x) {
+                this._carname = x;
+            }
+        }
+
+        let myCar = new Car("Ford");
+
+        myCar.carname = 'Fusca';
+
+        document.getElementById("demo").innerHTML = myCar.carname;
+        document.getElementById("demo2").innerHTML = document.getElementById("demo").innerHTML;
+    </script>
